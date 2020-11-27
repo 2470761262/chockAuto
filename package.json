@@ -16,7 +16,8 @@
     "typescript":"^4.0.3"
   },
   "scripts": {
-    "dev": "nodemon main.ts pro 15280398053"
+    "dev": "nodemon main.ts dev 15280398053",
+    "pro": "ts-node main.ts pro 15280398053"
   },
   "author": "",
   "license": "ISC"
