@@ -23,6 +23,7 @@ function toDayRun() {
     TaskList.forEach((i) => {
       if (i.cancel) i.cancel();
     });
+    TaskList = [];
     console.log(config.newDayTips);
   }
   let morningTime = getTaskTime(config.morning);
