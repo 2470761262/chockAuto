@@ -1,6 +1,6 @@
 const http = require("../request/axios");
 function getLogin() {
-    return new Promise((r) => {
+    return new Promise((r,s) => {
         http({
             method: "post",
             url: "/loginManager/pcLogin",
@@ -11,13 +11,17 @@ function getLogin() {
                 passWord: "96E79218965EB72C92A549DD5A330112",
                 qrCode: "",
                 sessionId: "sssss",
-                userName: "15280398053",
+                userName: process.argv[3],
             },
             headers: {
                 "Content-Type": "application/json;charset=UTF-8"
             }
         }).then(({ data }) => {
-            r(data.data.token.token);
+            if (data.code == 200) {
+                r(data.data.token.token);
+            } else {
+                s(data.message);
+            }
         })
     })
 }

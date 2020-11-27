@@ -1,6 +1,6 @@
 const express = require('express');
 const scanRouter = require("./decorate/scanRouter");
-const timingTask = require("./timingTask/index");
+const {timingTask} = require("./timingTask/index");
 const app = express();
 
 const ENVIRONMENT = process.argv[2] == "dev";

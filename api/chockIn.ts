@@ -24,8 +24,21 @@ function chockIn(tk) {
 }
 
 async function autoChockIn() {
-    let loginToek = await loginApi();
-    await getQR(loginToek);
-    return await chockIn(loginToek);
+    try {
+        const time = new Date().getDay();
+        
+        if (time != 0 && time != 6) {
+            let loginToek = await loginApi();
+            await getQR(loginToek);
+            return await chockIn(loginToek);
+
+        } else {
+            console.log("今天双休,不自动打卡了阿");
+        }
+
+    } catch (e) {
+        console.log(e);
+    }
+
 }
 export =  autoChockIn
