@@ -59,6 +59,7 @@ async function autoChockIn() {
         console.log("如果因此引发纠纷,请自行处理。");
         console.log("如果因此引发纠纷,请自行处理。");
         autoChockIn.runCount = 0;
+        return ;
       }
     }else{
         console.log("未知错误。");
