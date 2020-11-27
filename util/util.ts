@@ -18,8 +18,13 @@ function normalTime(time:string):string{
   return time.split(" ").reverse().join(":")
 }
 
+
+function isString(arg:any): arg is string{
+  return typeof arg == "string"
+}
 export {
   randomNum,
   getTaskTime,
-  normalTime
+  normalTime,
+  isString
 }

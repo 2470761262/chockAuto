@@ -10,6 +10,4 @@ const ENVIRONMENT = process.argv[2] == "dev";
 if (ENVIRONMENT) app.use(scanRouter.router);
 else timingTask(); //正式
 
-
-
 app.listen(3000);

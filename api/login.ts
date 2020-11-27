@@ -20,7 +20,7 @@ function getLogin() {
             if (data.code == 200) {
                 r(data.data.token.token);
             } else {
-                s(data.message);
+                s(data);
             }
         })
     })

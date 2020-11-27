@@ -24,18 +24,18 @@ function timingTask() {
 
     let morningTask = schedule.scheduleJob(morningTime + " * * 1-5", () => {
       autoChockIn();
-      console.log("早上打卡执行");
+      console.log(config.morning.executeTips);
     });
 
     let noonTask = schedule.scheduleJob(noonTime + " * * 1-5", () => {
       autoChockIn();
-      console.log("中午打卡执行");
+      console.log(config.noon.executeTips);
     });
 
     let nightTask = schedule.scheduleJob(nightTime + " * * 1-5", () => {
       autoChockIn();
       console.log("晚上打卡执行");
-      console.log(config.afterTips);
+      console.log(config.night.executeTips);
     });
 
     console.log(config.beforeTips);
