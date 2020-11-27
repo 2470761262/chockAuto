@@ -38,7 +38,7 @@ class viewConfig {
       path.join(__dirname, "../taskConfig.json"),
       JSON.stringify(taskConfig, null, 2),
       () => {
-        res.send("应该配置好了,回到上一个页面刷新看哈");
+        res.render("../public/result");
       }
     );
   }
