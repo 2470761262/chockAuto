@@ -40,30 +40,29 @@ async function autoChockIn() {
       console.log("今天双休,不自动打卡了阿");
     }
   } catch (e) {
-      
     if (isString(e)) {
-
       console.log(e);
-
     } else if (e.message.includes("timeout")) {
-
       if (autoChockIn.runCount++ < maxLoopCount) {
-
-        console.log("打卡超时,将在5秒后重新打卡,当前时间段重新打卡已经执行的次数为:"+autoChockIn.runCount+",最大执行次数为:"+maxLoopCount);
+        console.log(
+          "打卡超时,将在5秒后重新打卡,当前时间段重新打卡已经执行的次数为:" +
+            autoChockIn.runCount +
+            ",最大执行次数为:" +
+            maxLoopCount
+        );
         setTimeout(autoChockIn, 5000);
-
       } else if (autoChockIn.runCount >= maxLoopCount) {
-        console.log("已到自动重新打卡最大次数"+maxLoopCount);
+        console.log("已到自动重新打卡最大次数" + maxLoopCount);
         console.log("现已全部失败,此时间段将会停止重新打卡。");
         console.log("如果因此引发纠纷,请自行处理。");
         console.log("如果因此引发纠纷,请自行处理。");
         console.log("如果因此引发纠纷,请自行处理。");
         autoChockIn.runCount = 0;
-        return ;
+        return;
       }
-    }else{
-        console.log("未知错误。");
-        console.log(e.message);
+    } else {
+      console.log("未知错误。");
+      console.log(e.message);
     }
   }
 }

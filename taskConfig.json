@@ -1,23 +1,50 @@
 {
-  "newDayTips":"新的一天开始了",
-  "beforeTips":"今日打卡时间段",
-  "afterTips":"辛苦一天结束了",
-  "morning":{
-    "hour":[8,8],
-    "minute":[0,30],
-    "second":[0,60],
-    "executeTips":"早上打卡执行"
+  "newDayTips": "新的一天开始了",
+  "beforeTips": "今日打卡时间段",
+  "afterTips": "辛苦一天结束了",
+  "morning": {
+    "hour": [
+      "16",
+      "13"
+    ],
+    "minute": [
+      "22",
+      "30"
+    ],
+    "second": [
+      "0",
+      "60"
+    ],
+    "executeTips": "早上打卡执行"
   },
-  "noon":{
-    "hour":[12,13],
-    "minute":[0,50],
-    "second":[0,60],
-    "executeTips":"中午打卡执行"
+  "noon": {
+    "hour": [
+      "12",
+      "13"
+    ],
+    "minute": [
+      "0",
+      "50"
+    ],
+    "second": [
+      "0",
+      "60"
+    ],
+    "executeTips": "中午打卡执行"
   },
-  "night":{
-    "hour":[18,19],
-    "minute":[0,50],
-    "second":[0,60],
-    "executeTips":"晚上打卡执行"
+  "night": {
+    "hour": [
+      "18",
+      "19"
+    ],
+    "minute": [
+      "0",
+      "50"
+    ],
+    "second": [
+      "0",
+      "60"
+    ],
+    "executeTips": "晚上打卡执行"
   }
 }

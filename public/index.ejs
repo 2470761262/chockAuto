@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+
+      .cell-time{
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      .cell-time-title{
+        margin-right: 20px;
+        min-width: 35px;
+      }
+      .cell-item{
+        display: flex;
+        margin-right: 15px;
+        align-items: center;
+      }
+
+      .cell-item input{
+        width: 70px;
+        margin-left: 15px;
+        text-align: center;
+        height: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="./view/setConfig" method="post" enctype="application/x-www-form-urlencoded">
+      <h2>打卡时间随机区间可视化配置</h2>
+      <h4>自己看好了设置结果哦,别整个开始时间大于结束时间</h4>
+      <mian class="main">
+        <div class="set-interval">
+          <h3>早上:</h3>
+          <div class="cell-row">
+            <div class="cell-time">
+              <div class="cell-time-title">小时:</div>
+              <div class="cell-item">
+                <span>最小:</span>
+                <input type="number" name="morningHour" value="<%= taskConfig.morning.hour[0] %>" />
+              </div>
+              <div class="cell-item">
+                <span>最大:</span>
+                <input type="number" name="morningHour" value="<%= taskConfig.morning.hour[1] %>" />
+              </div>
+            </div>
+            <div class="cell-time">
+              <div class="cell-time-title">分钟:</div>
+              <div class="cell-item">
+                <span>最小:</span>
+                <input type="number" name="morningMinute" value="<%= taskConfig.morning.minute[0] %>" />
+              </div>
+              <div class="cell-item">
+                <span>最大:</span>
+                <input type="number" name="morningMinute" value="<%= taskConfig.morning.minute[1] %>" />
+              </div>
+            </div>
+            <div class="cell-time">
+              <div class="cell-time-title">秒:</div>
+              <div class="cell-item">
+                <span>最小:</span>
+                <input type="number" name="morningSecond" value="<%= taskConfig.morning.second[0] %>" />
+              </div>
+              <div class="cell-item">
+                <span>最大:</span>
+                <input type="number" name="morningSecond" value="<%= taskConfig.morning.second[1] %>" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="set-interval">
+          <h3>中午:</h3>
+          <div class="cell-row">
+            <div class="cell-time">
+              <div class="cell-time-title">小时:</div>
+              <div class="cell-item">
+                <span>最小:</span>
+                <input type="number" name="noonHour" value="<%= taskConfig.noon.hour[0] %>" />
+              </div>
+              <div class="cell-item">
+                <span>最大:</span>
+                <input type="number" name="noonHour" value="<%= taskConfig.noon.hour[1] %>" />
+              </div>
+            </div>
+            <div class="cell-time">
+              <div class="cell-time-title">分钟:</div>
+              <div class="cell-item">
+                <span>最小:</span>
+                <input type="number" name="noonMinute" value="<%= taskConfig.noon.minute[0] %>" />
+              </div>
+              <div class="cell-item">
+                <span>最大:</span>
+                <input type="number" name="noonMinute" value="<%= taskConfig.noon.minute[1] %>" />
+              </div>
+            </div>
+            <div class="cell-time">
+              <div class="cell-time-title">秒:</div>
+              <div class="cell-item">
+                <span>最小:</span>
+                <input type="number" name="noonSecond" value="<%= taskConfig.noon.second[0] %>" />
+              </div>
+              <div class="cell-item">
+                <span>最大:</span>
+                <input type="number" name="noonSecond" value="<%= taskConfig.noon.second[1] %>" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="set-interval">
+          <h3>晚上:</h3>
+          <div class="cell-row">
+            <div class="cell-time">
+              <div class="cell-time-title">小时:</div>
+              <div class="cell-item">
+                <span>最小:</span>
+                <input type="number" name="nightHour" value="<%= taskConfig.night.hour[0] %>" />
+              </div>
+              <div class="cell-item">
+                <span>最大:</span>
+                <input type="number" name="nightHour" value="<%= taskConfig.night.hour[1] %>" />
+              </div>
+            </div>
+            <div class="cell-time">
+              <div class="cell-time-title">分钟:</div>
+              <div class="cell-item">
+                <span>最小:</span>
+                <input type="number" name="nightMinute"  value="<%= taskConfig.night.minute[0] %>" />
+              </div>
+              <div class="cell-item">
+                <span>最大:</span>
+                <input type="number"  name="nightMinute" value="<%= taskConfig.night.minute[1] %>" />
+              </div>
+            </div>
+            <div class="cell-time">
+              <div class="cell-time-title">秒:</div>
+              <div class="cell-item">
+                <span>最小:</span>
+                <input type="number"  name="nightSecond"  value="<%= taskConfig.night.second[0] %>" />
+              </div>
+              <div class="cell-item">
+                <span>最大:</span>
+                <input type="number" name="nightSecond" value="<%= taskConfig.night.second[1] %>" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit">提交</button>
+      </mian>
+    </form>
+  </body>
+</html>
