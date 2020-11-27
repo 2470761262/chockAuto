@@ -49,7 +49,7 @@ async function autoChockIn() {
 
       if (autoChockIn.runCount++ < maxLoopCount) {
 
-        console.log("打卡超时,将在5秒后重新打卡,当前时间段重新打卡已经执行的次数为:"+autoChockIn.runCount);
+        console.log("打卡超时,将在5秒后重新打卡,当前时间段重新打卡已经执行的次数为:"+autoChockIn.runCount+",最大执行次数为:"+maxLoopCount);
         setTimeout(autoChockIn, 5000);
 
       } else if (autoChockIn.runCount >= maxLoopCount) {
