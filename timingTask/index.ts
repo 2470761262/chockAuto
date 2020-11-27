@@ -14,7 +14,7 @@ function timingTask() {
         autoChockIn();
         console.log("中午打卡执行");
     });
-    // 每天的中午上12点01分30秒触发 
+    // 每天的中午上18点01分30秒触发 
     schedule.scheduleJob('30 10 18 * * *', () => {
         autoChockIn();
         console.log("晚上打卡执行");
