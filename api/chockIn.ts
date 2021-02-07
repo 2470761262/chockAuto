@@ -29,11 +29,11 @@ function chockIn(tk) {
   });
 }
 
-async function autoChockIn() {
+async function autoChockIn(loginData) {
   try {
     const time = new Date().getDay();
     if (time != 0 && time != 6) {
-      let loginToek = await loginApi();
+      let loginToek = await loginApi(loginData);
       await getQR(loginToek);
       return await chockIn(loginToek);
     } else {
@@ -49,8 +49,11 @@ async function autoChockIn() {
             autoChockIn.runCount +
             ",最大执行次数为:" +
             maxLoopCount
+            +"倒霉蛋为:"+loginData.userName
         );
-        setTimeout(autoChockIn, 5000);
+        setTimeout(()=>{
+            autoChockIn(loginData);
+        }, 5000);
       } else if (autoChockIn.runCount >= maxLoopCount) {
         console.log("已到自动重新打卡最大次数" + maxLoopCount);
         console.log("现已全部失败,此时间段将会停止重新打卡。");

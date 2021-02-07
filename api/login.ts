@@ -1,6 +1,6 @@
 const http = require("../request/axios");
-const loginDataConfig = require("../loginDataConfig.json");
-function getLogin() {
+//const loginDataConfig = require("../loginDataConfig.json");
+function getLogin(config) {
     return new Promise((r,s) => {
         http({
             method: "post",
@@ -10,7 +10,7 @@ function getLogin() {
                 clientId: 0,
                 qrCode: "",
                 sessionId: "sssss",
-                ...loginDataConfig
+                ...config
             },
             headers: {
                 "Content-Type": "application/json;charset=UTF-8"

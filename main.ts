@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const app = express();
 app.set('view engine','ejs');
 app.use(bodyParser.urlencoded({ extended: false }))
-
 switch (process.argv[2]) {
   case "dev": // 本地开发
   case "viewConfig"://可视化配置
